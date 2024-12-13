@@ -17,6 +17,14 @@ $ docker-compose up --build
   POST http://localhost:3000/reading-intervals - body: user_id: number, book_id: number, start_page: number, end_page: number
   GET http://localhost:3000/books/top
 
+5. Logging in will send you a response body with the access token
+6. To make authenticated calls, you need to attach the token in your calls
+  a. In postman, before making a request, click Headers
+  b. Add `Authoriziation` in keys, and the value should be `Bearer ${token}`
+  c. Send the call
+7. Assign the role you want to give for the user on creation: user or admin
+8. admin users will be able to create and update books
+
 ## Run tests
 
 ```bash
